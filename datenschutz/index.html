@@ -13,7 +13,7 @@
   </header>
 
   <main>
-    <p><em>Stand: 12. Juni 2026 · <a href="../privacy/">English version</a></em></p>
+    <p><em>Stand: 13. Juni 2026 · <a href="../privacy/">English version</a></em></p>
 
     <h2>1. Verantwortlicher</h2>
     <p>
@@ -35,9 +35,12 @@
       <strong>ausschliesslich lokal auf deinem iPhone</strong> statt.
       <strong>Weder Audioaufnahmen noch Transkripte verlassen jemals dein
       Gerät.</strong> Die App benötigt kein Konto und erhebt selbst keine
-      personenbezogenen Daten. Einzige Ausnahme ist die Einblendung von
-      Werbung durch Google AdMob (siehe Ziffer 5), die nur mit deiner
-      Einwilligung personalisiert wird.
+      personenbezogenen Daten. Am Ende einer Sitzung überträgt die App
+      lediglich eine <strong>anonyme Gesamtzahl</strong> der gezählten Rufe an
+      einen weltweiten Live-Zähler (siehe Ziffer 5) – ohne Audio, ohne
+      Transkript und ohne jede Kennung, die einen Rückschluss auf dich
+      zuliesse. Werbung wird über Google AdMob eingeblendet (siehe Ziffer 6)
+      und nur mit deiner Einwilligung personalisiert.
     </p>
 
     <h2>3. Spracherkennung und Mikrofonzugriff</h2>
@@ -63,11 +66,38 @@
       Spitzenwerte, gewähltes Zählwort) sowie deine Einstellungen werden
       ausschliesslich lokal auf deinem Gerät gespeichert. Du kannst sie
       jederzeit in der App löschen; mit dem Löschen der App werden alle
-      Daten unwiderruflich entfernt. Eine Übertragung an uns oder Dritte
-      findet nicht statt.
+      Daten unwiderruflich entfernt. Diese detaillierten Sitzungsdaten
+      verlassen dein Gerät nicht – übertragen wird ausschliesslich die
+      anonyme Gesamtzahl gemäss Ziffer 5.
     </p>
 
-    <h2>5. Werbung (Google AdMob)</h2>
+    <h2>5. Weltweiter Live-Zähler (Google Firebase)</h2>
+    <p>
+      Auf der Website wird ein weltweiter Live-Zähler angezeigt, der alle je
+      gezählten „Mama“- und „Papa“-Rufe aufsummiert. Dazu überträgt die App
+      <strong>am Ende einer Sitzung</strong> ausschliesslich die Anzahl der in
+      dieser Sitzung gezählten Rufe (z.&nbsp;B. „+12 Mama, +3 Papa“) sowie die
+      Information, dass eine Sitzung stattgefunden hat. Diese Zahlen werden
+      <strong>anonym und ohne jede personen- oder gerätebezogene Kennung</strong>
+      übertragen und unmittelbar zu einer weltweiten Gesamtsumme addiert; ein
+      Rückschluss auf einzelne Nutzer oder Geräte ist nicht möglich.
+      <strong>Es werden keine Audiodaten, Transkripte, Standort- oder
+      Sitzungsdetails übermittelt.</strong>
+    </p>
+    <p>
+      Für die Speicherung dieser Gesamtsumme nutzen wir Cloud Firestore, einen
+      Dienst von Google (Google Ireland Limited, Gordon House, Barrow Street,
+      Dublin 4, Irland). Technisch bedingt verarbeitet Google dabei die
+      IP-Adresse deines Geräts zum Zeitpunkt der Übertragung; eine darüber
+      hinausgehende Profilbildung findet durch uns nicht statt. Zum Schutz vor
+      Missbrauch wird die Übertragung durch Apples Geräteprüfung
+      (DeviceCheck/App&nbsp;Check) abgesichert. Rechtsgrundlage ist unser
+      berechtigtes Interesse an der Darstellung anonymer Nutzungszahlen
+      (Art. 6 Abs. 1 lit. f DSGVO). Weitere Informationen in der
+      <a href="https://firebase.google.com/support/privacy">Datenschutzerklärung von Firebase</a>.
+    </p>
+
+    <h2>6. Werbung (Google AdMob)</h2>
     <p>
       Die App finanziert sich über Werbeanzeigen. Hierfür nutzen wir Google
       AdMob, einen Dienst der Google Ireland Limited, Gordon House, Barrow
@@ -100,7 +130,7 @@
       <a href="https://support.google.com/admob/answer/6128543">„Wie Google Daten verwendet“</a>.
     </p>
 
-    <h2>6. Deine Rechte</h2>
+    <h2>7. Deine Rechte</h2>
     <p>
       Du hast nach der DSGVO das Recht auf Auskunft (Art. 15), Berichtigung
       (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung
@@ -114,16 +144,16 @@
       übermittelt, liegen uns in aller Regel keine Daten über dich vor, zu
       denen wir Auskunft erteilen könnten. Für Daten, die im Rahmen der
       Werbeausspielung verarbeitet werden, wende dich bitte zusätzlich an
-      Google (siehe Ziffer 5).
+      Google (siehe Ziffer 6).
     </p>
 
-    <h2>7. Kinder</h2>
+    <h2>8. Kinder</h2>
     <p>
       Die App richtet sich an Eltern und ist nicht für die eigenständige
       Nutzung durch Kinder bestimmt.
     </p>
 
-    <h2>8. Änderungen dieser Datenschutzerklärung</h2>
+    <h2>9. Änderungen dieser Datenschutzerklärung</h2>
     <p>
       Wir passen diese Datenschutzerklärung an, wenn sich die App oder die
       Rechtslage ändert. Die jeweils aktuelle Fassung findest du stets unter

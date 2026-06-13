@@ -14,20 +14,77 @@
   </header>
 
   <main>
-    <div class="counter">47</div>
-    <p class="counter-label">Mama-Rufe. Eine Stunde. Ein Samstagvormittag.</p>
+    <p class="counter-intro center">Weltweit gezählt – live, gerade jetzt:</p>
+    <div class="counters">
+      <div class="counter-card">
+        <div class="counter mama" id="mama">–</div>
+        <div class="counter-word">Mama</div>
+      </div>
+      <div class="counter-vs">vs.</div>
+      <div class="counter-card">
+        <div class="counter papa" id="papa">–</div>
+        <div class="counter-word">Papa</div>
+      </div>
+    </div>
+    <p class="counter-label">
+      Rufe insgesamt, gezählt von <span id="sessions">–</span> Mamameter-Sessions.
+    </p>
 
     <p class="center">
       Wie oft rufen deine Kinder wirklich „Mama“? Das Mamameter hört live zu,
       zählt mit und zeigt dir deinen Stresspegel – von entspanntem Grün bis
       Gefahrenzone Rot. Die Spracherkennung läuft komplett auf deinem iPhone:
-      Kein Audio verlässt jemals dein Gerät.
+      Kein Audio verlässt jemals dein Gerät – nur die anonyme Gesamtzahl fließt
+      in den Live-Zähler oben ein.
     </p>
 
     <p class="center" style="margin-top: 2.5rem;">
       <span class="badge">Bald im App Store</span>
     </p>
   </main>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+    import { getFirestore, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+
+    // Firebase web config — apiKey is intentionally public (security is enforced
+    // by Firestore rules + App Check, not by hiding this key).
+    const app = initializeApp({
+      apiKey: "AIzaSyDQW2LehDmOrDDONHEkQB4VliavJukn8Bc",
+      authDomain: "mamacounter-ae3a8.firebaseapp.com",
+      projectId: "mamacounter-ae3a8",
+    });
+    const db = getFirestore(app);
+
+    const fmt = new Intl.NumberFormat("de-DE");
+
+    // Smoothly tick a number up to its new target instead of snapping.
+    function animateTo(el, target) {
+      const from = Number(el.dataset.value || 0);
+      if (from === target) return;
+      el.dataset.value = target;
+      const start = performance.now();
+      const dur = 700;
+      function step(now) {
+        const t = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = fmt.format(Math.round(from + (target - from) * eased));
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    onSnapshot(doc(db, "counters", "global"), (snap) => {
+      const d = snap.data() || {};
+      animateTo(document.getElementById("mama"), d.mama ?? 0);
+      animateTo(document.getElementById("papa"), d.papa ?? 0);
+      document.getElementById("sessions").textContent = fmt.format(d.sessions ?? 0);
+    }, () => {
+      // Offline / rules error: leave the placeholders, don't break the page.
+      document.getElementById("mama").textContent = "–";
+      document.getElementById("papa").textContent = "–";
+    });
+  </script>
 
   <footer>
     <a href="datenschutz/">Datenschutz</a>

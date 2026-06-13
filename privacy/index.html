@@ -13,7 +13,7 @@
   </header>
 
   <main>
-    <p><em>Last updated: June 12, 2026 · <a href="../datenschutz/">Deutsche Version</a></em></p>
+    <p><em>Last updated: June 13, 2026 · <a href="../datenschutz/">Deutsche Version</a></em></p>
 
     <h2>1. Controller</h2>
     <p>The controller responsible for data processing in connection with the iOS app "Mamameter" ("the app") is:</p>
@@ -31,8 +31,11 @@
       speech recognition happens <strong>entirely on your iPhone</strong>.
       <strong>Neither audio recordings nor transcripts ever leave your
       device.</strong> The app requires no account and collects no personal
-      data itself. The only exception is advertising served by Google AdMob
-      (see section 5), which is only personalized with your consent.
+      data itself. At the end of a session the app transmits only an
+      <strong>anonymous total</strong> of the calls counted to a worldwide live
+      counter (see section 5) — no audio, no transcript, and no identifier that
+      could be traced back to you. Advertising is served by Google AdMob
+      (see section 6) and only personalized with your consent.
     </p>
 
     <h2>3. Speech recognition and microphone access</h2>
@@ -55,11 +58,36 @@
       Session statistics (date, duration, count, average and peak rates,
       selected count word) and your settings are stored exclusively on your
       device. You can delete them in the app at any time; deleting the app
-      removes all data irrevocably. Nothing is transmitted to us or third
-      parties.
+      removes all data irrevocably. These detailed session statistics never
+      leave your device — only the anonymous total described in section 5 is
+      transmitted.
     </p>
 
-    <h2>5. Advertising (Google AdMob)</h2>
+    <h2>5. Worldwide live counter (Google Firebase)</h2>
+    <p>
+      The website shows a worldwide live counter that sums up every "Mama" and
+      "Papa" call ever counted. To power it, the app transmits — <strong>only at
+      the end of a session</strong> — the number of calls counted during that
+      session (e.g. "+12 Mama, +3 Papa") plus the fact that a session took
+      place. These numbers are transmitted <strong>anonymously and without any
+      personal or device identifier</strong> and are immediately added to a
+      global total; no inference about individual users or devices is possible.
+      <strong>No audio, transcripts, location, or session details are
+      transmitted.</strong>
+    </p>
+    <p>
+      This total is stored using Cloud Firestore, a service provided by Google
+      (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland).
+      For technical reasons Google processes your device's IP address at the
+      moment of transmission; we do not carry out any further profiling. To
+      prevent abuse, the transmission is protected by Apple's device attestation
+      (DeviceCheck/App&nbsp;Check). The legal basis is our legitimate interest
+      in displaying anonymous usage figures (Art. 6(1)(f) GDPR). See the
+      <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>
+      for details.
+    </p>
+
+    <h2>6. Advertising (Google AdMob)</h2>
     <p>
       The app is funded through ads served by Google AdMob, a service of
       Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland
@@ -89,7 +117,7 @@
       for details.
     </p>
 
-    <h2>6. Your rights</h2>
+    <h2>7. Your rights</h2>
     <p>
       Under the GDPR you have the right of access (Art. 15), rectification
       (Art. 16), erasure (Art. 17), restriction of processing (Art. 18),
@@ -100,16 +128,16 @@
     <p>
       Note: since the app does not transmit personal data to us, we generally
       hold no data about you. For data processed in the course of ad serving,
-      please also contact Google (see section 5).
+      please also contact Google (see section 6).
     </p>
 
-    <h2>7. Children</h2>
+    <h2>8. Children</h2>
     <p>
       The app is aimed at parents and is not intended for independent use by
       children.
     </p>
 
-    <h2>8. Changes</h2>
+    <h2>9. Changes</h2>
     <p>
       We will update this policy when the app or the legal situation changes.
       The current version is always available at this address.

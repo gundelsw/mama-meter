@@ -52,18 +52,58 @@ header.site .claim {
   margin-top: 0.4rem;
 }
 
-.counter {
-  font-size: 5rem;
-  font-weight: 800;
-  color: var(--accent);
+.counter-intro {
+  color: var(--muted);
+  margin: 1.5rem 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.counters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.counter-card {
+  flex: 1;
+  max-width: 280px;
   text-align: center;
-  margin: 2rem 0 0.5rem;
+}
+
+.counter {
+  font-size: 4.2rem;
+  font-weight: 800;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+
+.counter.mama { color: #a35ed1; }   /* Markenfarbe Mama (Lila) */
+.counter.papa { color: #214fc7; }   /* Markenfarbe Papa (Kobalt) */
+
+.counter-word {
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.counter-vs {
+  color: var(--muted);
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .counter-label {
   text-align: center;
   color: var(--muted);
-  margin-bottom: 2.5rem;
+  margin: 0.8rem 0 2.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 460px) {
+  .counter { font-size: 3.2rem; }
 }
 
 .badge {

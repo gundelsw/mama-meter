@@ -1,3 +1,4 @@
 {
-  "adsEnabled": false
+  "adsEnabled": true,
+  "interstitialEnabled": false
 }

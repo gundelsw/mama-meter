@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mamameter – das Mama-Stress-o-Meter</title>
-  <meta name="description" content="Wie oft rufen deine Kinder wirklich Mama? Das Mamameter zählt mit – komplett privat, direkt auf deinem iPhone.">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css">
+  <title>Mamameter – the Mama Stress-o-Meter</title>
+  <meta name="description" content="How often do your kids really call Mama? Mamameter counts along – fully private, right on your iPhone.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <header class="site">
     <nav class="lang-switch">
-      <a href="/" class="active">DE</a>
-      <a href="/en/">EN</a>
+      <a href="/">DE</a>
+      <a href="/en/" class="active">EN</a>
     </nav>
-    <a href="/"><img src="/apple-touch-icon.png" alt="Mama Counter" class="logo"></a>
-    <h1><a href="./">Mamameter</a></h1>
-    <p class="claim">Das Mama-Stress-o-Meter fürs iPhone</p>
+    <a href="/en/"><img src="/apple-touch-icon.png" alt="Mama Counter" class="logo"></a>
+    <h1><a href="/en/">Mamameter</a></h1>
+    <p class="claim">The Mama Stress-o-Meter for iPhone</p>
   </header>
 
   <main>
-    <p class="counter-intro center">Weltweit gezählt – live, gerade jetzt:</p>
+    <p class="counter-intro center">Counted worldwide – live, right now:</p>
     <div class="counters">
       <div class="counter-card">
         <div class="counter mama" id="mama">–</div>
@@ -35,19 +35,18 @@
       </div>
     </div>
     <p class="counter-label">
-      Rufe insgesamt, gezählt von <span id="sessions">–</span> Mamameter-Sessions.
+      Calls in total, counted across <span id="sessions">–</span> Mamameter sessions.
     </p>
 
     <p class="center">
-      Wie oft rufen deine Kinder wirklich „Mama“? Das Mamameter hört live zu,
-      zählt mit und zeigt dir deinen Stresspegel – von entspanntem Grün bis
-      Gefahrenzone Rot. Die Spracherkennung läuft komplett auf deinem iPhone:
-      Kein Audio verlässt jemals dein Gerät – nur die anonyme Gesamtzahl fließt
-      in den Live-Zähler oben ein.
+      How often do your kids really call “Mama”? Mamameter listens live, counts
+      along and shows your stress level – from relaxed green to red danger zone.
+      Speech recognition runs entirely on your iPhone: no audio ever leaves your
+      device – only the anonymous total feeds the live counter above.
     </p>
 
     <p class="center" style="margin-top: 2.5rem;">
-      <span class="badge">Bald im App Store</span>
+      <span class="badge">Coming soon to the App Store</span>
     </p>
   </main>
 
@@ -64,7 +63,7 @@
     });
     const db = getFirestore(app);
 
-    const fmt = new Intl.NumberFormat("de-DE");
+    const fmt = new Intl.NumberFormat("en-US");
 
     // Smoothly tick a number up to its new target instead of snapping.
     function animateTo(el, target) {
@@ -95,9 +94,9 @@
   </script>
 
   <footer>
-    <a href="/datenschutz/">Datenschutz</a>
-    <a href="/support/">Support</a>
-    <a href="/impressum/">Impressum</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/en/support/">Support</a>
+    <a href="/en/impressum/">Legal Notice</a>
   </footer>
 </body>
 </html>

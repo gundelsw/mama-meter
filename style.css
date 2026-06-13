@@ -35,6 +35,35 @@ main {
 header.site {
   text-align: center;
   padding: 3rem 1rem 1rem;
+  position: relative;
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  display: block;
+  margin: 0 auto 0.9rem;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.lang-switch a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.lang-switch a.active {
+  color: var(--text);
+  background: var(--bg-soft);
 }
 
 header.site h1 {

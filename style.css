@@ -143,6 +143,21 @@ header.site .claim {
   color: var(--muted);
 }
 
+/* App Store call-to-action button */
+.appstore-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+}
+
+.appstore-btn:hover {
+  opacity: 0.9;
+}
+
 .center { text-align: center; }
 
 .more-links {

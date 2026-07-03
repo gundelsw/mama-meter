@@ -158,6 +158,14 @@ header.site .claim {
   opacity: 0.9;
 }
 
+/* Official-style App Store download badge */
+.appstore-badge {
+  display: inline-block;
+  width: 180px;
+  height: auto;
+  vertical-align: middle;
+}
+
 .center { text-align: center; }
 
 .more-links {
